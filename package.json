@@ -1,0 +1,27 @@
+{
+  "name": "restful-api-for-mom-s-recipe-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhatdoan1991/Restful-API-for-Mom-s-Recipe-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nhatdoan1991/Restful-API-for-Mom-s-Recipe-app/issues"
+  },
+  "homepage": "https://github.com/nhatdoan1991/Restful-API-for-Mom-s-Recipe-app#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.8",
+    "mongoose": "^5.12.11",
+    "nodemon": "^2.0.7"
+  }
+}
