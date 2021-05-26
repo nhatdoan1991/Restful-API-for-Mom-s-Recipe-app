@@ -3,10 +3,9 @@ const app = express()
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+let port = process.env.PORT || 3000
 
 require('dotenv/config');
-
-
 
 //Import routes
 
@@ -19,14 +18,14 @@ app.use(bodyParser.json());
 
 // Routes 
 app.get('/',(req,res)=>{
-    res.send('We not home');
+    res.send("This is the root for Mom's Recipe App");
 });
 
-//Connect to MongoDB
+//Connect to MongoDB through mongoose
 
 mongoose.connect(process.env.DB_CONNECTION,{ useUnifiedTopology: true,useNewUrlParser: true },()=>{
     console.log('connected to DB');
 })
 
 
-app.listen(3000);
+app.listen(port);
