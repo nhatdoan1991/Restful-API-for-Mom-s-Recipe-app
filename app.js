@@ -22,8 +22,9 @@ app.get('/',(req,res)=>{
 });
 
 //Connect to MongoDB through mongoose
-
-mongoose.connect(process.env.DB_CONNECTION,{ useUnifiedTopology: true,useNewUrlParser: true },()=>{
+let url = "mongodb+srv://nkapi:"+process.env.PASSWORD+"@apigraphql.6f6sy.mongodb.net/API_GRAPHQL?retryWrites=true&w=majority"
+console.log(url)
+mongoose.connect(url,{ useUnifiedTopology: true,useNewUrlParser: true },()=>{
     console.log('connected to DB');
 })
 
