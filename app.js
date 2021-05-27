@@ -3,6 +3,7 @@ const app = express()
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+let url = "mongodb+srv://nkapi:Khongbiet321@apigraphql.6f6sy.mongodb.net/API_GRAPHQL?retryWrites=true&w=majority"
 let port = process.env.PORT || 3000
 
 require('dotenv/config');
@@ -18,11 +19,13 @@ app.use(bodyParser.json());
 
 // Routes 
 app.get('/',(req,res)=>{
-    res.send("This is the root for Mom's Recipe App");
+    mongoose.connect(url,{ useUnifiedTopology: true,useNewUrlParser: true },()=>{
+        res.json('connected to DB');
+    })
 });
 
 //Connect to MongoDB through mongoose
-let url = "mongodb+srv://nkapi:Khongbiet321@apigraphql.6f6sy.mongodb.net/API_GRAPHQL?retryWrites=true&w=majority"
+
 mongoose.connect(url,{ useUnifiedTopology: true,useNewUrlParser: true },()=>{
     console.log('connected to DB');
 })
