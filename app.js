@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 // Routes 
 app.get('/',(req,res)=>{
     mongoose.connect(url,{ useUnifiedTopology: true,useNewUrlParser: true },()=>{
-        res.json('connected to DB');
+        res.json('connected to DB'+url);
     })
 });
 
