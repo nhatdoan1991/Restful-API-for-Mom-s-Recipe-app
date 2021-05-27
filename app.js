@@ -19,14 +19,7 @@ app.use(bodyParser.json());
 
 // Routes 
 app.get('/',(req,res)=>{
-    try{
-        mongoose.connect(url,{ useUnifiedTopology: true,useNewUrlParser: true },()=>{
-            res.json('connected to DB'+url);
-        })
-    }catch(error){
-        res.json(error)
-    }
-   
+    res.send("This is the root for Mom's Recipe App");
 });
 
 //Connect to MongoDB through mongoose
