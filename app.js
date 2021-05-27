@@ -3,7 +3,6 @@ const app = express()
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-let url = "mongodb+srv://nkapi:Khongbiet321@apigraphql.6f6sy.mongodb.net/API_GRAPHQL?retryWrites=true&w=majority"
 let port = process.env.PORT || 3000
 
 require('dotenv/config');
@@ -23,7 +22,7 @@ app.get('/',(req,res)=>{
 });
 
 //Connect to MongoDB through mongoose
-
+let url = "mongodb+srv://nkapi:"+process.env.PASSWORD+"@apigraphql.6f6sy.mongodb.net/API_GRAPHQL?retryWrites=true&w=majority"
 mongoose.connect(url,{ useUnifiedTopology: true,useNewUrlParser: true },()=>{
     console.log('connected to DB');
 })
