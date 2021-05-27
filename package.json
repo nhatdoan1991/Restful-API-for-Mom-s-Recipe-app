@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/nhatdoan1991/Restful-API-for-Mom-s-Recipe-app#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",

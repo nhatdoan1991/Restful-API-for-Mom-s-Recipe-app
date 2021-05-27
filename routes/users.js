@@ -3,6 +3,7 @@ const router = express.Router();
 const Users = require('../models/User');
 
 const bodyParser = require('body-parser');
+const { schema } = require('../models/User');
 router.use(bodyParser.json());
 // Get all user
 router.get('/', async (req,res)=>{
@@ -22,6 +23,8 @@ router.post('/', async(req,res)=>{
             first_name: req.body.first_name,
             last_name:req.body.last_name
         },
+        email:req.body.email,
+        password:req.body.password,
         birthday:req.body.birthday
     })
     try{
